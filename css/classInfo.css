@@ -1,0 +1,355 @@
+h1{
+    padding:20px 0;
+    text-align: left;
+    line-height: 1.2;
+}
+
+h1 span{
+    font-family: 'Libre Baskerville', serif;
+    font-size:20px;
+}
+
+.classInfo_intro{
+    display:flex;
+    flex-wrap:wrap-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.classInfo_introTxt{
+    width: 90%;
+}
+
+.classInfo_introTxt p:nth-of-type(1){
+    padding-bottom:20px;
+    border-bottom: 1px solid #ccc;
+    animation-delay: 0.3s
+}
+
+.classInfo_introTxt ul{
+    padding-top: 20px;
+    animation-delay: 0.3s;
+}
+.classPrice{
+    color:var(--pk);
+    font-size: 20px;
+    animation-delay: 0.5s;
+}
+
+.button{
+    animation-delay: 0.5s;
+}
+
+.classInfo_pic{
+    width: 100%;
+}
+
+.pic_big img{
+    border-radius:10px;
+}
+.pic_small{
+    margin-top: 20px;
+    width: 100%;
+    display:flex;
+}
+
+.pic_small div{
+    margin: 5px;
+    overflow:hidden;
+    cursor: pointer;
+}
+
+.pic_small div:first-of-type img{
+    transform:scale(1.2);
+    filter:blur(2px);
+}
+
+@media screen and (min-width:768px){
+    section{
+        margin: 100px 0;
+    }
+
+    h1{
+        font-size:36px;
+        font-weight: normal;
+    }
+    .classInfo_intro{
+        flex-wrap:nowrap;
+        justify-content: space-between;
+        width: 95%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .classInfo_introTxt{
+        padding: 0 25px;
+        width: 50%;
+    }
+
+    .classInfo_pic{
+        width: 50%;
+        align-self: flex-end;
+    }
+
+    .pic_big{
+        /* border-radius: 45%; */
+        position:relative;
+        /* overflow: hidden; */
+        
+    }
+
+    .pic_big:before{
+        content:"";
+        display:block;
+        border:1px solid #777;
+        width: 89%;
+        height: 89%;
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        /* border-radius:45% 44% 43% 44% / 45% 44% 43% 44%;  */
+        animation:borderRadius 4s 0.5s linear infinite both; 
+    } 
+
+    .pic_big:after{
+        content:"";
+        display:block;
+        border:1px solid#777;
+        width: 90%;
+        height: 90%;
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+         animation:borderRadius 5s 2s linear infinite both; 
+    } 
+
+
+    .pic_big img{
+        animation:borderRadiusBack 5s  linear infinite;
+        transform:scale(0.87);
+       
+    }
+    @keyframes borderRadius {
+        0%{border-radius:45% 43% 41% 39%;}
+        25%{border-radius:39% 45% 43% 41%;}
+        50%{border-radius:41% 39% 45% 43%;}
+        75%{border-radius:43% 41% 39% 45%;}
+        100%{border-radius: 45% 43% 41% 39%;}
+    }
+
+    @keyframes borderRadiusBack {
+        0%{border-radius:45% 43% 41% 39%;}
+        25%{border-radius:43% 41% 39% 45%;}
+        50%{border-radius:41% 39% 45% 43%;}
+        75%{border-radius:39% 45% 43% 41%;}
+        100%{border-radius: 45% 43% 41% 39%;}
+    }
+
+    .pic_small div{
+        margin: 5px;
+        overflow:hidden;
+        border-radius:50%;
+        position:relative;
+    }
+
+    .pic_small div img{
+        transform:scale(1);
+        transition:0.5s;
+    }
+
+    .pic_small div:hover img{
+        transform:scale(1.2);
+    }
+
+}
+
+@media screen and (min-width:992px){
+    h1{
+        font-size: 50px;
+        font-weight: normal;
+        padding: 0;
+    }
+    
+    h2{
+        padding: 0;
+    }
+    .classInfo_intro{
+        justify-content: center;
+    }
+    .classInfo_introTxt{
+        padding: 0 25px;
+        width: 495px;
+        margin:auto;
+    }
+    .classInfo_introTxt ul,.classInfo_introTxt p{
+        padding: 10px;
+    }
+
+    .classPrice{
+        line-height:3;
+        font-size: 30px;
+       
+    }
+
+    .classInfo_pic{
+        width: 480px;
+    } 
+    .pic_big{
+        width: 80%;
+        margin:auto;
+    }
+    .pic_small{
+        width: 80%;
+        margin: 20px auto 0;
+    }
+}
+
+
+/* =================================== */
+
+.classInfo_describe{
+    max-width: 1200px;
+    margin: 120px auto;
+}
+
+.desc_pic{
+    margin: 0 auto;
+    width: 100%;
+    height: 680;
+    overflow: hidden;
+}
+
+.slider{
+    display:flex;
+    width: 1600px;
+    position:relative;
+    animation:slide 6s infinite;
+}
+
+@keyframes slide{
+    0%{left:0;}
+    28.57%{left:0px;}
+    33.33%{left:-400px;}
+    61.9%{left:-400px;}
+    66.66%{left:-800px;}
+    95.23%{left:-800px;}
+    100%{left:-1200px;}
+}
+
+.desc_txt{
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+@media screen and (min-width:400px){
+    .desc_pic{
+        width: 400px;
+        margin: auto;
+        height: auto;
+        border-radius: 20px;
+    }
+}
+@media screen and (min-width:768px){
+    .classInfo_describe{
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .classInfo_describe:before{
+        content:"";
+        background-image:linear-gradient(transparent,var(--bl));
+        width: 30%;
+        height: 400px;
+        display:block;
+        margin-right: -10%;
+    }
+
+    .desc_txt{
+        padding: 20px;
+        width: 480px;
+        /* margin: 0; */
+    }
+    .desc_txt h2{
+        padding: 0px 20px;
+    }
+    .desc_txt p{
+        padding: 20px;
+    }
+}
+
+/* ============================ */
+.classInfo_like{    
+    text-align: center;
+    /* margin-top: 40px; */
+    color:#555;
+}
+
+.classes{
+   width: 60%;
+   margin: 0px auto 40px;
+}
+
+.classes_img{
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.class_description{
+    width: 100%;
+}
+@media screen and (min-width:768px){
+    .like_container{
+        margin-top: 40px;
+    }
+    .classes{
+        margin:0 30px;
+        display:inline-block;
+        font-size:0;
+        width: 300px;
+    }
+    .classes:after{
+        content:"";
+        width: 0;
+        height: 1px;
+        border-top: 2px solid #ccc;
+        display:block;
+        transition: 0.5s;
+    }
+    .classes:hover.classes:after{
+        width: 100%;
+    }
+    
+    .classes:hover .classes_img img{
+        transform: scale(1.1);
+    }
+    .class_name,.class_description{
+        font-size:12px;
+        width: 170px;
+        margin:auto;
+    }
+
+    .classes_img{
+        width: 170px;
+        height: 170px;
+        display:inline-block;
+    }
+
+    .classes_img img{
+        transform:scale(1);
+        transition:0.5s;
+    }
+}
+
+@media screen and (min-width:992px){
+    .classes{
+        width: 170px;
+    }
+}

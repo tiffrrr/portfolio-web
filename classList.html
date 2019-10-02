@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="stylesheet" href="css/classList.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap" rel="stylesheet">
+    <title>Class List</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="FUN PLAY"></a>
+        </div>
+        <input type="checkbox" id="menuCtrl">
+        <div class="hb">
+            <label class="hbLabel" for="menuCtrl">
+                <div class="hb1"></div>
+                <div class="hb2"></div>
+                <div class="hb3"></div>
+            </label>
+        </div>
+        <nav>
+            <ul>
+                <li class="navCheck"><a href="classList.html">Classes</a></li>
+                <li><a href="venueRental.html">Venue Rental</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="aboutUS.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+            <div class="icon">
+                <a href="#"><img src="img/member.png" alt="member"></a>
+                <a href="#"><img src="img/shopping.png" alt="shoppingCart"></a>
+            </div>
+        </nav>
+
+    </header>
+    <section class="list_banner">
+        <h1 class="loadShow">Our Classes</h1>
+    </section>
+    <div class="classNav">
+        <input type="checkbox" id="classCtrl">
+        <label class="clLabel" for="classCtrl">
+            Class Type
+            <img src="img/arrow.png" alt="">
+        </label>
+        <nav class="classType">
+            <li>Sensory Play</li>
+            <li>Creative Art</li>
+            <li>Music Together</li>
+            <li>Outdoor Activity</li>
+        </nav>
+    </div>
+    <section class="list_container">
+        <h2>Sensory Play</h2>
+        <div class="list_col">
+            <div class="list_bg">
+                <img class="" src="img/list0.jpg" alt="">
+            </div>
+            <div class="list_img">
+                <img class="" src="img/list0.jpg" alt="">
+            </div>
+        </div>
+        <div class="list_col">
+            <div class="list_class">
+                <div class="classes">
+                    <a href="classInfo.html">
+                        <div class="classes_img">
+                            <img src="img/class1.jpg" alt="">
+                        </div>
+                        <h3 class="class_name">Class1</h3>
+                        <p class="class_description"> Introduction to songs, props, musical instruments and fun in FUN
+                            PLAY! </p>
+                    </a>
+                </div>
+
+                <div class="classes">
+                    <a href="classInfo.html">
+                        <div class="classes_img">
+                            <img src="img/class2.jpg" alt="">
+                        </div>
+                        <h3 class="class_name">Class2</h3>
+                        <p class="class_description">Paint, sing, sculpt, collage and imagine in a uniquely creative
+                            space.</p>
+                    </a>
+                </div>
+
+                <div class="classes">
+                    <a href="classInfo.html">
+                        <div class="classes_img">
+                            <img src="img/class3.jpg" alt="">
+                        </div>
+                        <h3 class="class_name">Class3</h3>
+                        <p class="class_description">Explore the senses and support visual and auditory development.</p>
+                    </a>
+                </div>
+                <div class="classes">
+                    <a href="classInfo.html">
+                        <div class="classes_img">
+                            <img src="img/class1.jpg" alt="">
+                        </div>
+                        <h3 class="class_name">Class4</h3>
+                        <p class="class_description"> Introduction to songs, props, musical instruments and fun in FUN
+                            PLAY! </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p class="copyright">Copyright &copy; 2019Fun Play. All rights reserved.</p>
+
+    </footer>
+
+    <script>
+        var btn = document.querySelectorAll(".classType li");
+        var i, index;
+        var liContent = [];
+
+        function init() {
+            for (i = 0; i < btn.length; i++) {
+                btn[i].onclick = change;
+                liContent[i] = btn[i].innerText;
+            }
+            return liContent;
+        }
+
+        function change(e) {
+            for (i = 0; i < btn.length; i++) {
+                btn[i].style.border = "2px solid transparent";
+            }
+
+            if (document.querySelector(".list_bg img").classList.contains("leftMove")) {
+                document.querySelector(".list_bg img").classList.remove("leftMove");
+            }
+            if (document.querySelector(".list_img img").classList.contains("leftMove")) {
+                document.querySelector(".list_img img").classList.remove("leftMove");
+            }
+            if (document.querySelector(".list_class").classList.contains("leftMove")) {
+                document.querySelector(".list_class").classList.remove("leftMove");
+            }
+         
+         
+           
+            e.target.style.border = "2px solid #ccc";
+            document.querySelector("h2").innerText = e.target.innerText;
+            index = liContent.indexOf(e.target.innerText)
+            document.querySelector(".list_img img").src = `img/list${index}.jpg`;
+            document.querySelector(".list_bg img").src = `img/list${index}.jpg`;
+            document.querySelector(".list_bg img").classList.add("leftMove");
+            document.querySelector(".list_img img").classList.add("leftMove");
+            document.querySelector(".list_class").classList.add("leftMove");
+           
+        
+        }
+
+        window.addEventListener("load", init, false);
+
+    </script>
+
+</body>
+
+</html>

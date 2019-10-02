@@ -1,0 +1,344 @@
+:root{
+    --dbr:#e9e1d1;
+    --br:#f0e8d8;
+    --fbr:#d0cbc0;
+    --or:#f39d48;
+    --bl:#95c1ba;
+    --pk:#EC9696;
+}
+
+.venueRent_content{
+    position: relative;
+}
+
+.venueRent_banner{
+    position:relative;
+    text-align: center;
+    background-size: cover;
+    height:90vh;
+    background-image: url(../img/venue.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.venueRent_info,.venueRent_gallery,.venueRent_about{
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+
+
+.venueRent_banner:before{
+    content:"";
+    background-color:var(--bl);
+    position:absolute;
+    bottom:-5%;
+    top: -5%;
+    left: 0%;
+    width: 40%;
+    height: 110%;
+    z-index:-1;
+}
+
+.venueRent_banner:after{
+    content:"";
+    background-color:var(--or);
+    position:absolute;
+    bottom:-5%;
+    top: -5%;
+    right: 0%;
+    width: 40%;
+    height: 110%;
+    z-index:-1;
+}
+
+
+.venueRent_banner p{
+    color:#000;
+    border:1px solid #fff;
+    padding: 20px 30px;
+    position:absolute;
+    top: 70%;
+    right: 0%;
+    background-color:rgba(255,255,255,0.5);
+}
+
+
+@media screen and (min-width:768px){
+    .venueRent_info,.venueRent_gallery,.venueRent_about{
+        margin-top:150px;
+        margin-bottom: 50px;
+    }
+
+    .venueRent_banner{
+        background-size: 90%;
+    }
+
+ 
+}
+
+@media screen and (min-width:992px){
+    .venueRent_banner{
+        background-size: 70%;
+    }
+    .venueRent_banner:before{
+        width: 40%;
+        height: 55%;
+      
+    }
+    
+    .venueRent_banner:after{
+        width: 40%;
+        height: 55%;
+        margin-top: auto;
+    }
+}
+.venueRent_info {
+    display:flex;
+    flex-wrap:wrap;
+    padding: 100px 0;
+    position:relative;
+}
+
+.venueRent_info:after{
+    content:"—————— Gallery";
+    display:block;
+    width: 200px;
+    height: 30px;
+    transform: rotate(90deg);
+    position:absolute;
+    right: 0;
+    bottom: 20px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+@media screen and (min-width:768px){
+    .venueRent_info:after{
+        bottom: -80px;
+    }
+
+}
+
+.classPrice{
+    font-size: 26px;
+    font-weight: 500;
+    color:var(--pk)
+}
+
+
+/* ==========手機======= */
+.venueRent_info_img{
+    width: 100%;
+    /* margin: auto; */
+}
+
+.venueRent_info_img:before{
+    content:"Venue Features:";
+    font-size: 26px;
+    display: block;
+    padding: 20px;
+    box-sizing: border-box
+}
+
+.venueRent_info_feature h2{
+    display: none;
+}
+.venueRent_info_feature p{
+    padding: 5px;
+}
+.deviceList{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.deviceType{
+    width: 45%;
+    font-size: 0px;
+}
+
+.deviceType img{
+    width: 27%;
+    vertical-align: middle;
+}
+.deviceType p{
+    display: inline-block;
+    vertical-align: middle;
+    font-size:16px;
+}
+
+.venueRent_describe{
+    padding-bottom: 20px;
+}
+@media screen and (min-width:768px){
+    .venueRent_info {
+        align-items: center;
+        justify-content: center;
+        flex-wrap: no-wrap;
+    }
+
+    .venueRent_info_img:before{
+        display: none;
+    }
+
+    .venueRent_info_img{
+        width: 60%;
+        margin-right:-30%;
+        position:relative;
+        bottom: 125px;
+        overflow: hidden;
+        border-radius:10px;
+    }
+    
+    .venueRent_info_feature h2{
+        display: block;
+        padding: 10px 5px;
+    }
+    .venueRent_info_feature{
+        position:relative;
+        top: 125px;
+        width: 70%;
+        box-sizing: border-box;
+        padding: 30px;
+        background-color:rgba(255,255,255,0.7);
+    }
+}
+
+@media screen and (min-width:992px){
+    .venueRent_info {
+        align-items: center;
+        justify-content: center;
+        flex-wrap: no-wrap;
+    }
+
+    .venueRent_info_img:before{
+        display: none;
+    }
+
+    .venueRent_info_img{
+        width: 40%;
+        position:static;
+        margin: 0;
+    }
+    
+    .venueRent_info_feature h2{
+        display: block;
+        padding: 10px 5px;
+    }
+    .venueRent_info_feature{
+        position: static;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 30px;
+    }
+}
+/* ---------------------------------- */
+.venueRent_gallery{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: flex-start;
+}
+
+.venueRent_gallery :nth-child(3),.venueRent_gallery :nth-child(4){
+    width: 50%;
+}
+
+.venueRent_gallery .gallery_pic:nth-child(2),.venueRent_gallery :nth-child(6){
+    display:none;
+}
+
+.gallery_pic{
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery_pic img{
+    transform: scale(1);
+    transition:0.5s;
+}
+.gallery_pic p{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -72px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.6);
+    color:#fff;
+    transition:0.5s;
+}
+
+.gallery_pic:hover p{
+    bottom: 0;
+}
+
+.gallery_pic:hover img{
+    transform:scale(1.2);
+}
+
+@media screen and (min-width:768px){
+    .gallery_pic{
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .venueRent_gallery{
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    .venueRent_gallery .gallery_pic:nth-child(1),.venueRent_gallery :nth-child(5){
+        display:none;
+    }
+    .venueRent_gallery :nth-child(3),.venueRent_gallery :nth-child(4){
+        width: 22%;
+    }
+    .venueRent_gallery .gallery_pic:nth-child(2),.venueRent_gallery :nth-child(6){
+        display:block;
+        width: 22%;
+    }
+    .venueRent_gallery .gallery_pic:nth-child(2) img{
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:768px){
+    .about_pic{
+        width: 70%;
+        margin: auto;
+        overflow: hidden;
+        border-radius:10px;
+    }
+
+    .about_describe p{
+        margin: 20px 0;
+        padding: 10px;
+    }
+}
+@media screen and (min-width:992px){
+    .about_container{
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .about_pic{
+        width: 50%;
+        margin: 0;
+      
+    }
+
+    .about_describe{
+        width: 45%;
+        box-sizing: border-box;
+        padding: 10px 50px 10px 30px;
+        border-left: 1px solid #000;
+    }
+
+    .about_describe p{
+        margin: 20px 0;
+        padding: 0;
+    }
+}
+
+
+
+    /* text-orientation: mixed;
+writing-mode: vertical-lr;

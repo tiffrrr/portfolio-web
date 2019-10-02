@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class Information</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="stylesheet" href="css/classInfo.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="FUN PLAY"></a>
+        </div>
+        <input type="checkbox" id="menuCtrl">
+        <div class="hb">
+            <label class="hbLabel" for="menuCtrl">
+                <div class="hb1"></div>
+                <div class="hb2"></div>
+                <div class="hb3"></div>
+            </label>
+        </div>
+        <nav>
+            <ul>
+                <li class="navCheck"><a href="classList.html">Classes</a></li>
+                <li><a href="venueRental.html">Venue Rental</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="aboutUS.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+            <div class="icon">
+                <a href="#"><img src="img/member.png" alt="member"></a>
+                <a href="#"><img src="img/shopping.png" alt="shoppingCart"></a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="classInfo_content">
+        <div class="classInfo_intro">
+            <div class="classInfo_introTxt">
+                <h1 class="loadShow"> <span>- Class -</span> <br>Outdoor Activity</h1>
+                <p>Outdoor Activity is an early childhood program for children from birth through
+                    age 8 and the grownups!</p>
+                <ul>
+                    <li><span>Teacher: </span>Sandra Lin</li>
+                    <li><span>Time: </span>10:00-12:00am (2hrs)</li>
+                    <li> <span>Date: </span>Every Thursday during Aug 1,2019 - Aug 28,2019</li>
+                    <li><span>Age: </span>4 month ~ 3 years old</li>
+                </ul>
+                <p class="classPrice">$500/child</p>
+                <a class="button" href="#">Book Now</a>
+            </div>
+
+            <div class="classInfo_pic">
+                <div class="pic_big">
+                    <img src="img/info0.jpg" alt="">
+                </div>
+                <div class="pic_small">
+                    <div> <img src="img/info0.jpg"></div>
+                    <div> <img src="img/info1.jpg"></div>
+                    <div> <img src="img/info2.jpg"></div>
+                    <div> <img src="img/info3.jpg"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="classInfo_describe">
+            <div class="desc_pic">
+                <div class="slider">
+                <img src="img/infoL1.jpg" alt="">
+                <img src="img/infoL2.jpg" alt="">
+                <img src="img/infoL3.jpg" alt="">
+                <img src="img/infoL1.jpg" alt="">
+            </div>
+            </div>
+            <div class="desc_txt">
+                <h2>Class Description:</h2>
+                <p>Playful, rich, and engaging, Outdoor Activity helps
+                    children of all ages discoverthe world and environment by playing with the grownups they love.
+                    It
+                    turns out outdoor activities for children also supports overall early childhood development.
+                </p>
+                <p>Playful, rich, and engaging, Outdoor Activity helps
+                    children of all ages discoverthe world and environment by playing with the grownups they love.
+                    It
+                    turns out outdoor activities for children also supports overall early childhood development.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="classInfo_like">
+        <h2>You Might Also Like</h2>
+        <div class="like_container">
+            <div class="classes">
+                <a href="classInfo.html">
+                    <div class="classes_img">
+                        <img src="img/class3.jpg" alt="">
+
+                    </div>
+                    <p class="class_name">Sensory Play</p>
+                    <p class="class_description">Use all senses to discover and explore the environment</p>
+                </a>
+            </div>
+
+            <div class="classes">
+                <a href="classInfo.html">
+                    <div class="classes_img">
+                        <img src="img/class1.jpg" alt="">
+                    </div>
+                    <p class="class_name">Music</p>
+                    <p class="class_description">Introduction to songs, props, musical instruments and fun.</p>
+                </a>
+            </div>
+
+            <div class="classes">
+                <a href="classInfo.html">
+                    <div class="classes_img">
+                        <img src="img/class2.jpg" alt="">
+                    </div>
+                    <p class="class_name">Art</p>
+                    <p class="class_description">Paint,sculpt, collage and imagine in a creative
+                        space.</p>
+                </a>
+            </div>
+            <div class="classes">
+                <a href="classInfo.html">
+                    <div class="classes_img">
+                        <img src="img/class1.jpg" alt="">
+                    </div>
+                    <p class="class_name">Music</p>
+                    <p class="class_description">Introduction to songs, props, musical instruments and fun.</p>
+                </a>
+            </div>
+
+
+
+    </section>
+    <footer>
+        <p class="copyright">Copyright &copy; 2019Fun Play. All rights reserved.</p>
+    </footer>
+
+    <script>
+    var btn=document.querySelectorAll(".pic_small img");
+    
+    function init(){
+        for(i=0;i<btn.length;i++){
+        btn[i].onclick=change;     
+    }
+    }
+   
+    function change(e){
+        for(i=0;i<btn.length;i++){
+        btn[i].style.filter="blur(0)";   
+        btn[i].style.transform="scale(1)";
+    }
+        e.target.style.filter="blur(2px)";
+        e.target.style.transform="scale(1.2)";
+        document.querySelector(".pic_big img").src=e.target.src
+    }
+   
+    window.addEventListener("load",init,false);
+
+        var classNameShow;
+        var picBigShow;
+
+        function $name(name){
+            return document.querySelector(name);
+        }
+        function appear(){
+            if(window.innerWidth >= 768){
+                
+                $name(".classInfo_introTxt p:nth-of-type(1)").classList.add("loadShow");
+                $name(".classInfo_introTxt ul").classList.add("loadShow");
+                $name(".classPrice").classList.add("loadShow");
+                $name(".button").classList.add("loadShow");
+          
+        }else{
+            $name(".classInfo_pic").classList.add("loadShow");
+        }
+        }
+        
+        window.addEventListener("load",appear,false);
+     
+    </script>
+</body>
+
+</html>

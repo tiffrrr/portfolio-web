@@ -1,0 +1,339 @@
+.full{
+    max-width: 1400px;
+}
+
+section{
+    margin: 100px 0;
+}
+
+
+.banner_img{
+    overflow: hidden;
+    width: 100%;
+}
+
+.banner_img img{
+    min-width:600px;
+    transform:rotateY(180deg);
+    animation-delay: 0.5s;
+}
+
+.banner_txt{
+    width:100%;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.3;
+    margin-top: 10px;
+    background-color:rgba(255,255,255,0.5);
+    animation:aboutShow 1s 0.6s backwards;
+}
+
+@keyframes aboutShow{
+    0%{
+        top:6%;
+        opacity:0;
+    }
+    100%{
+        top:10%;
+        opacity:1;
+    }
+
+}
+
+
+@media screen and (min-width:768px){
+    .aboutUs_banner{
+        position:relative;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .banner_img{
+        width: 90%;
+        margin: auto;
+        max-width: 840px;
+    }
+    
+    .banner_txt{
+        width: 420px;
+        position:absolute;
+        font-size: 40px;
+        border-bottom: 3px solid #000;
+        right: 20px;
+        top: 10%;
+        text-align: right;
+        background-color: transparent;
+        font-family: 'Libre Baskerville', serif;
+        line-height: 1.3;
+        font-style: italic;
+    }
+    
+    .aboutUs_banner:after{
+        content:"";
+        display:block;
+        width: 36%;
+        padding-bottom: 30%;
+        background-color: var(--bl);
+        opacity:0.5;
+        position:absolute;
+        left: 0;
+        bottom: -10%;
+    }
+}
+
+/* ----------------------------------------------- */
+.intro_container{
+    display:flex;
+}
+.aboutUs_intro .intro_container:first-of-type{
+    flex-wrap: wrap;
+     flex-wrap: wrap-reverse;
+}
+
+.aboutUs_intro .intro_container:last-of-type{
+   
+    flex-wrap: wrap;
+}
+
+.goal{
+    position:relative;
+    width: 50%;
+    height:0;
+    padding-bottom: 50%;
+    border-radius:50%;
+    text-align: center;
+    margin:20px auto;
+}
+
+.goal p{
+    font-size: 26px;
+    padding:calc(50% - 26px) 0;
+    color:#fff;
+}
+.back{
+    width: 100%;
+    height: auto;
+    position:absolute;
+    left: 0;
+    top: 0;
+    border-radius:50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-shadow: 3px 3px 2px #ccc;
+}
+.front{
+    display: none;
+}
+
+
+.goal_l .back{
+    background-image: url(../img/class1.jpg);
+    
+}
+.goal_p .back{
+    background-image: url(../img/info2.jpg);
+
+}.goal_t .back{
+    background-image: url(../img/goal.jpg);
+
+}
+@media screen and (min-width:768px){
+    .front{
+        width: 100%;
+        height: auto;
+        backface-visibility: hidden;
+        transition:0.5s;
+        position:absolute;
+        left: 0;
+        top: 0;
+        border-radius:50%;
+        display:block;
+    }
+
+    .front{
+        transform: rotateY(0deg);
+    }
+
+    .goal:hover .front{
+        transform: rotateY(180deg);
+    }
+    .goal_l .front{
+        background-color:#ffbe7d;
+    }
+    .goal_p .front{ 
+        background-color:#b1d6d0;
+    }
+    .goal_t .front{ 
+        background-color:rgb(255, 181, 181);
+    }
+
+    .back{
+        transform: rotateY(180deg);
+          backface-visibility: hidden;
+        transition:0.5s;
+        
+    }
+
+    .goal:hover .back{
+        transform: rotateY(360deg);
+    }
+    
+    
+}
+
+
+.intro_txt_info,.intro_txt_belief{
+    /* width: 65%; */
+    box-sizing: border-box;
+    padding: 20px;
+    border:1px solid #ccc;
+    border-radius:20px;
+
+}
+/* ----------------------------------------------- */
+
+@media screen and (min-width:768px){
+    .aboutUs_intro{
+        margin: 150px auto;
+    }
+    .intro_container{
+        border-radius:50px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .aboutUs_intro .intro_container:first-of-type{
+        border-left:1px solid #555;
+        border-bottom:1px solid #555;
+        align-items:flex-start;
+    }
+    
+    .aboutUs_intro .intro_container:last-of-type{
+        border-right:1px solid #555;
+        border-bottom:1px solid #555;
+    }
+    .intro_txt{
+        padding: 10px;
+        margin: 30px 0;
+    }
+  
+    .intro_txt_info{
+        width: 65%;
+        box-sizing: border-box;
+        padding: 10px;
+        border:transparent;
+    }
+    .goal{
+        width: 25%;
+        padding-bottom: 25%;
+        margin: 0;
+    }
+    .goal_l{
+        right: 74px;
+        bottom: 20px;;
+    }
+    .goal_p{
+        left: 80%;
+        width: 20%;
+        padding-bottom: 20%;
+        margin: -100px 0 -50px;
+    }
+    
+    .goal_t{
+        right: 72px;
+        top: 200px;
+    }
+    
+    .intro_txt_belief{
+        width:65%;
+        border:transparent;
+    }
+}
+
+@media screen and (min-width:992px){
+    .aboutUs_intro{
+        width: 90%;
+    }
+    .goal_l{
+        right: 74px;
+        bottom: 20px;;
+    }
+
+    
+    .goal_t{
+        right: 72px;
+        top: 120px;
+    }
+}
+
+
+
+/* ------------------------ */
+h2{
+    text-align: center;
+}
+
+.about_team_intro{
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.about_team_intro .photo{
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.photo img{
+    border:3px solid var(--bl);
+    border-radius:10px;
+}
+
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 2px solid #ccc;
+   
+}
+
+.introTxt{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 55%;
+}
+@media screen and (min-width:768px){
+    .about_team_content{
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .about_team_intro{
+        width: 50%;
+    }
+}
+@media screen and (min-width:992px){
+   
+
+    .about_team_intro{
+        display:block;
+        width: 30%;
+        box-sizing: border-box;
+        padding: 0 50px;
+    }
+
+    .about_team_intro .photo{
+        width: 95%;
+        text-align: right;
+        position:relative;
+        top: 40px;
+    }
+    .photo img{
+        width: 60%;
+    }
+
+    .job,.experience{
+        text-align: right;
+    }
+}
