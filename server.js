@@ -10,3 +10,4 @@ http.createServer(function(req,res){
         res.end('nodeJS test page ')
     }
 }).listen(8080);  
+console.log('Server running ');  
