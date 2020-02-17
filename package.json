@@ -1,0 +1,24 @@
+{
+  "name": "personal-web",
+  "version": "1.0.0",
+  "description": "- 7pages\r - using html / css/ java-script\r - website : http://140.115.236.71/demo-personal/DD102/web/I1900516/",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiffrrr/personal-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiffrrr/personal-web/issues"
+  },
+  "homepage": "https://github.com/tiffrrr/personal-web#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
